@@ -1,12 +1,10 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "lab4v2",
     "name": "db",
-    "connector": "memory"
-  },
-  "MySQL": {
-    "name": "MySQL",
-    "localStorage": "",
-    "file": "",
-    "connector": "memory"
+    "connector": "mysql",
+    "user": "root"
   }
 }

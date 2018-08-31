@@ -34,5 +34,41 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Articulo": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Cliente": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Domicilio": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Migrations": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Pedidoventa": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Pedidoventadetalle": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PasswordResets": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Rubro": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Users": {
+    "dataSource": "db",
+    "public": true
   }
 }

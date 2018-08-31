@@ -1,13 +1,13 @@
 product: '1.0.0'
 
 info:
-  name: api
-  title: api
+  name: apimarce
+  title: apimarce
   version: "1.0.0"
 
 apis:
-  'api':
-    $ref: api.yaml
+  'apimarce':
+    $ref: apimarce.yaml
 
 visibility:
   view:
