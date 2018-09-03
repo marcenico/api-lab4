@@ -9,8 +9,8 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../webapp/src/app/shared/sdk",
-    "ionic:sdk": "./node_modules/.bin/lb-sdk server/server ../ionicapp/src/app/shared/sdk"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../webapp/src/app/shared/sdk -io disabled",
+    "ionic:sdk": "./node_modules/.bin/lb-sdk server/server ../ionicapp/src/app/shared/sdk -io disabled"
   },
   "dependencies": {
     "compression": "^1.0.3",
