@@ -3,12 +3,12 @@ paths:
     get:
       tags:
         - User
-      summary: Buscar un elemento relacionado por id para accessTokens.
+      summary: Find a related item by id for accessTokens.
       operationId: User.prototype.__findById__accessTokens
       parameters:
         - name: fk
           in: path
-          description: Clave foránea para accessTokens
+          description: Foreign key for accessTokens
           required: true
           type: string
           format: JSON
@@ -27,12 +27,12 @@ paths:
     delete:
       tags:
         - User
-      summary: Suprimir un elemento relacionado por id para accessTokens.
+      summary: Delete a related item by id for accessTokens.
       operationId: User.prototype.__destroyById__accessTokens
       parameters:
         - name: fk
           in: path
-          description: Clave foránea para accessTokens
+          description: Foreign key for accessTokens
           required: true
           type: string
           format: JSON
@@ -49,12 +49,12 @@ paths:
     put:
       tags:
         - User
-      summary: Actualizar un elemento relacionado por id para accessTokens.
+      summary: Update a related item by id for accessTokens.
       operationId: User.prototype.__updateById__accessTokens
       parameters:
         - name: fk
           in: path
-          description: Clave foránea para accessTokens
+          description: Foreign key for accessTokens
           required: true
           type: string
           format: JSON
@@ -79,7 +79,7 @@ paths:
     get:
       tags:
         - User
-      summary: accessTokens consultas de User.
+      summary: Queries accessTokens of User.
       operationId: User.prototype.__get__accessTokens
       parameters:
         - name: filter
@@ -104,7 +104,7 @@ paths:
     post:
       tags:
         - User
-      summary: Crea una nueva instancia en accessTokens de este modelo.
+      summary: Creates a new instance in accessTokens of this model.
       operationId: User.prototype.__create__accessTokens
       parameters:
         - name: data
@@ -127,7 +127,7 @@ paths:
     delete:
       tags:
         - User
-      summary: Suprime todos los accessTokens de este modelo.
+      summary: Deletes all accessTokens of this model.
       operationId: User.prototype.__delete__accessTokens
       parameters:
         - name: id
@@ -144,7 +144,7 @@ paths:
     get:
       tags:
         - User
-      summary: Recuentos accessTokens de User.
+      summary: Counts accessTokens of User.
       operationId: User.prototype.__count__accessTokens
       parameters:
         - name: where
@@ -172,9 +172,9 @@ paths:
   /Users:
     post:
       tags:
-        - Users
+        - User
       summary: Create a new instance of the model and persist it into the data source.
-      operationId: Users.create
+      operationId: User.create
       parameters:
         - name: data
           in: body
@@ -182,18 +182,18 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
     patch:
       tags:
-        - Users
+        - User
       summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: Users.patchOrCreate
+      operationId: User.patchOrCreate
       parameters:
         - name: data
           in: body
@@ -201,18 +201,18 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
     put:
       tags:
-        - Users
+        - User
       summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: Users.replaceOrCreate__put_Users
+      operationId: User.replaceOrCreate__put_Users
       parameters:
         - name: data
           in: body
@@ -220,18 +220,18 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
     get:
       tags:
-        - Users
+        - User
       summary: Find all instances of the model matched by filter from the data source.
-      operationId: Users.find
+      operationId: User.find
       parameters:
         - name: filter
           in: query
@@ -245,14 +245,14 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Users'
+              $ref: '#/definitions/User'
       deprecated: false
   /Users/replaceOrCreate:
     post:
       tags:
-        - Users
+        - User
       summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: Users.replaceOrCreate__post_Users_replaceOrCreate
+      operationId: User.replaceOrCreate__post_Users_replaceOrCreate
       parameters:
         - name: data
           in: body
@@ -260,19 +260,19 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
   /Users/upsertWithWhere:
     post:
       tags:
-        - Users
+        - User
       summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
-      operationId: Users.upsertWithWhere
+      operationId: User.upsertWithWhere
       parameters:
         - name: where
           in: query
@@ -286,19 +286,19 @@ paths:
           required: false
           schema:
             description: An object of model property name/value pairs
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
   '/Users/{id}/exists':
     get:
       tags:
-        - Users
+        - User
       summary: Check whether a model instance exists in the data source.
-      operationId: 'Users.exists__get_Users_{id}_exists'
+      operationId: 'User.exists__get_Users_{id}_exists'
       parameters:
         - name: id
           in: path
@@ -318,9 +318,9 @@ paths:
   '/Users/{id}':
     head:
       tags:
-        - Users
+        - User
       summary: Check whether a model instance exists in the data source.
-      operationId: 'Users.exists__head_Users_{id}'
+      operationId: 'User.exists__head_Users_{id}'
       parameters:
         - name: id
           in: path
@@ -339,9 +339,9 @@ paths:
       deprecated: false
     get:
       tags:
-        - Users
+        - User
       summary: 'Find a model instance by {{id}} from the data source.'
-      operationId: Users.findById
+      operationId: User.findById
       parameters:
         - name: id
           in: path
@@ -359,13 +359,13 @@ paths:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
     put:
       tags:
-        - Users
+        - User
       summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: 'Users.replaceById__put_Users_{id}'
+      operationId: 'User.replaceById__put_Users_{id}'
       parameters:
         - name: id
           in: path
@@ -379,18 +379,18 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
     delete:
       tags:
-        - Users
+        - User
       summary: 'Delete a model instance by {{id}} from the data source.'
-      operationId: Users.deleteById
+      operationId: User.deleteById
       parameters:
         - name: id
           in: path
@@ -406,9 +406,9 @@ paths:
       deprecated: false
     patch:
       tags:
-        - Users
+        - User
       summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: Users.prototype.patchAttributes
+      operationId: User.prototype.patchAttributes
       parameters:
         - name: data
           in: body
@@ -416,10 +416,10 @@ paths:
           required: false
           schema:
             description: An object of model property name/value pairs
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
         - name: id
           in: path
-          description: Users id
+          description: User id
           required: true
           type: string
           format: JSON
@@ -427,14 +427,14 @@ paths:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
   '/Users/{id}/replace':
     post:
       tags:
-        - Users
+        - User
       summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: 'Users.replaceById__post_Users_{id}_replace'
+      operationId: 'User.replaceById__post_Users_{id}_replace'
       parameters:
         - name: id
           in: path
@@ -448,19 +448,19 @@ paths:
           required: false
           schema:
             description: Model instance data
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
   /Users/findOne:
     get:
       tags:
-        - Users
+        - User
       summary: Find first instance of the model matched by filter from the data source.
-      operationId: Users.findOne
+      operationId: User.findOne
       parameters:
         - name: filter
           in: query
@@ -472,14 +472,14 @@ paths:
         '200':
           description: Request was successful
           schema:
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       deprecated: false
   /Users/update:
     post:
       tags:
-        - Users
+        - User
       summary: 'Update instances of the model matched by {{where}} from the data source.'
-      operationId: Users.updateAll
+      operationId: User.updateAll
       parameters:
         - name: where
           in: query
@@ -493,7 +493,7 @@ paths:
           required: false
           schema:
             description: An object of model property name/value pairs
-            $ref: '#/definitions/Users'
+            $ref: '#/definitions/User'
       responses:
         '200':
           description: Request was successful
@@ -509,9 +509,9 @@ paths:
   /Users/count:
     get:
       tags:
-        - Users
+        - User
       summary: Count instances of the model matched by where from the data source.
-      operationId: Users.count
+      operationId: User.count
       parameters:
         - name: where
           in: query
@@ -552,21 +552,21 @@ paths:
           description: Request was successful
           schema:
             description: >+
-              El cuerpo de respuesta contiene propiedades de la AccessToken
-              creada durante el inicio de la sesión.
+              The response body contains properties of the AccessToken created on
+              login.
 
-              Dependiendo del valor del parámetro `include`, el cuerpo puede
-              contener propiedades adicionales:
-
-
+              Depending on the value of `include` parameter, the body may contain
+              additional properties:
 
 
 
 
 
-                - `user` - `U+007BUserU+007D` - Datos del usuario conectado
 
-              actualmente. (`include=user`)
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
 
 
             type: object
@@ -2832,366 +2832,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /PasswordResets:
-    post:
-      tags:
-        - PasswordResets
-      summary: Create a new instance of the model and persist it into the data source.
-      operationId: PasswordResets.create
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-    patch:
-      tags:
-        - PasswordResets
-      summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: PasswordResets.patchOrCreate
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-    put:
-      tags:
-        - PasswordResets
-      summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: PasswordResets.replaceOrCreate__put_PasswordResets
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-    get:
-      tags:
-        - PasswordResets
-      summary: Find all instances of the model matched by filter from the data source.
-      operationId: PasswordResets.find
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  /PasswordResets/replaceOrCreate:
-    post:
-      tags:
-        - PasswordResets
-      summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: PasswordResets.replaceOrCreate__post_PasswordResets_replaceOrCreate
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  /PasswordResets/upsertWithWhere:
-    post:
-      tags:
-        - PasswordResets
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
-      operationId: PasswordResets.upsertWithWhere
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  '/PasswordResets/{id}/exists':
-    get:
-      tags:
-        - PasswordResets
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'PasswordResets.exists__get_PasswordResets_{id}_exists'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-  '/PasswordResets/{id}':
-    head:
-      tags:
-        - PasswordResets
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'PasswordResets.exists__head_PasswordResets_{id}'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-    get:
-      tags:
-        - PasswordResets
-      summary: 'Find a model instance by {{id}} from the data source.'
-      operationId: PasswordResets.findById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: filter
-          in: query
-          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-    put:
-      tags:
-        - PasswordResets
-      summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: 'PasswordResets.replaceById__put_PasswordResets_{id}'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-    delete:
-      tags:
-        - PasswordResets
-      summary: 'Delete a model instance by {{id}} from the data source.'
-      operationId: PasswordResets.deleteById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-      deprecated: false
-    patch:
-      tags:
-        - PasswordResets
-      summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: PasswordResets.prototype.patchAttributes
-      parameters:
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/PasswordResets'
-        - name: id
-          in: path
-          description: PasswordResets id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  '/PasswordResets/{id}/replace':
-    post:
-      tags:
-        - PasswordResets
-      summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: 'PasswordResets.replaceById__post_PasswordResets_{id}_replace'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  /PasswordResets/findOne:
-    get:
-      tags:
-        - PasswordResets
-      summary: Find first instance of the model matched by filter from the data source.
-      operationId: PasswordResets.findOne
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/PasswordResets'
-      deprecated: false
-  /PasswordResets/update:
-    post:
-      tags:
-        - PasswordResets
-      summary: 'Update instances of the model matched by {{where}} from the data source.'
-      operationId: PasswordResets.updateAll
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/PasswordResets'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            description: Information related to the outcome of the operation
-            type: object
-            properties:
-              count:
-                description: The number of instances updated
-                type: number
-                format: double
-      deprecated: false
-  /PasswordResets/count:
-    get:
-      tags:
-        - PasswordResets
-      summary: Count instances of the model matched by where from the data source.
-      operationId: PasswordResets.count
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              count:
-                type: number
-                format: double
-      deprecated: false
   /Rubros:
     post:
       tags:
@@ -3552,6 +3192,366 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /Usuarios:
+    post:
+      tags:
+        - Usuarios
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Usuarios.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+    patch:
+      tags:
+        - Usuarios
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Usuarios.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+    put:
+      tags:
+        - Usuarios
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Usuarios.replaceOrCreate__put_Usuarios
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+    get:
+      tags:
+        - Usuarios
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Usuarios.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Usuarios'
+      deprecated: false
+  /Usuarios/replaceOrCreate:
+    post:
+      tags:
+        - Usuarios
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Usuarios.replaceOrCreate__post_Usuarios_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+  /Usuarios/upsertWithWhere:
+    post:
+      tags:
+        - Usuarios
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Usuarios.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+  '/Usuarios/{id}/exists':
+    get:
+      tags:
+        - Usuarios
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Usuarios.exists__get_Usuarios_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Usuarios/{id}':
+    head:
+      tags:
+        - Usuarios
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Usuarios.exists__head_Usuarios_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Usuarios
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Usuarios.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+    put:
+      tags:
+        - Usuarios
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Usuarios.replaceById__put_Usuarios_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+    delete:
+      tags:
+        - Usuarios
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Usuarios.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Usuarios
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: Usuarios.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Usuarios'
+        - name: id
+          in: path
+          description: Usuarios id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+  '/Usuarios/{id}/replace':
+    post:
+      tags:
+        - Usuarios
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Usuarios.replaceById__post_Usuarios_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+  /Usuarios/findOne:
+    get:
+      tags:
+        - Usuarios
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Usuarios.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Usuarios'
+      deprecated: false
+  /Usuarios/update:
+    post:
+      tags:
+        - Usuarios
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Usuarios.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Usuarios'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Usuarios/count:
+    get:
+      tags:
+        - Usuarios
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Usuarios.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   x-any:
     properties: {}
@@ -3605,16 +3605,13 @@ definitions:
       codigo:
         maxLength: 45
         type: string
-      preciocompra:
+      precioCompra:
         type: number
         format: double
-      precioventa:
+      precioVenta:
         type: number
         format: double
       iva:
-        type: number
-        format: double
-      rubroId:
         type: number
         format: double
       createdAt:
@@ -3623,12 +3620,15 @@ definitions:
       updatedAt:
         type: string
         format: date-time
+      rubroId:
+        type: number
+        format: double
     required:
       - id
       - denominacion
       - codigo
-      - preciocompra
-      - precioventa
+      - precioCompra
+      - precioVenta
       - iva
       - rubroId
     additionalProperties: false
@@ -3637,12 +3637,6 @@ definitions:
       id:
         type: number
         format: double
-      createdAt:
-        type: string
-        format: date-time
-      updatedAt:
-        type: string
-        format: date-time
       razonSocial:
         maxLength: 45
         type: string
@@ -3652,22 +3646,20 @@ definitions:
       saldo:
         type: number
         format: double
+      domicilioId:
+        type: number
+        format: double
     required:
       - id
       - razonSocial
       - cuit
+      - domicilioId
     additionalProperties: false
   Domicilio:
     properties:
       id:
         type: number
         format: double
-      createdAt:
-        type: string
-        format: date-time
-      updatedAt:
-        type: string
-        format: date-time
       calle:
         maxLength: 45
         type: string
@@ -3683,12 +3675,12 @@ definitions:
       longitud:
         type: number
         format: double
-      clienteId:
-        type: number
-        format: double
-      pedidoId:
-        type: number
-        format: double
+      createdAt:
+        type: string
+        format: date-time
+      updatedAt:
+        type: string
+        format: date-time
     required:
       - id
       - calle
@@ -3718,10 +3710,10 @@ definitions:
       id:
         type: number
         format: double
-      createdAt:
-        type: string
-        format: date-time
-      updatedAt:
+      nroPedido:
+        type: number
+        format: double
+      fechaPedido:
         type: string
         format: date-time
       fechaEstimadaEntrega:
@@ -3736,12 +3728,6 @@ definitions:
       entregado:
         type: number
         format: double
-      fechaPedido:
-        type: string
-        format: date-time
-      numeroPedido:
-        maxLength: 45
-        type: string
       subTotal:
         type: number
         format: double
@@ -3751,17 +3737,20 @@ definitions:
       clienteId:
         type: number
         format: double
+      domicilioId:
+        type: number
+        format: double
     required:
       - id
-      - fechaEstimadaEntrega
+      - nroPedido
+      - fechaPedido
       - gastosEnvio
       - estado
       - entregado
-      - fechaPedido
-      - numeroPedido
       - subTotal
       - montoTotal
       - clienteId
+      - domicilioId
     additionalProperties: false
   Pedidoventadetalle:
     properties:
@@ -3783,12 +3772,6 @@ definitions:
       pedidoVentaId:
         type: number
         format: double
-      createdAt:
-        type: string
-        format: date-time
-      updatedAt:
-        type: string
-        format: date-time
     required:
       - id
       - cantidad
@@ -3796,25 +3779,6 @@ definitions:
       - porcentajeDescuento
       - articuloId
       - pedidoVentaId
-    additionalProperties: false
-  PasswordResets:
-    properties:
-      email:
-        maxLength: 45
-        type: string
-      token:
-        maxLength: 45
-        type: string
-      createdAt:
-        type: string
-        format: date-time
-      id:
-        type: number
-        format: double
-    required:
-      - email
-      - token
-      - createdAt
     additionalProperties: false
   Rubro:
     properties:
@@ -3841,7 +3805,7 @@ definitions:
       - codigo
       - denominacion
     additionalProperties: false
-  Users:
+  Usuarios:
     properties:
       id:
         type: number

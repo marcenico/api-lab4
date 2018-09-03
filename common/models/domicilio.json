@@ -13,7 +13,8 @@
     "id": {
       "type": "Number",
       "id": true,
-      "required": true,
+      "generated": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -24,36 +25,6 @@
         "dataPrecision": 10,
         "dataScale": 0,
         "nullable": "N"
-      }
-    },
-    "createdAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "created_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "updatedAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "updated_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
       }
     },
     "calle": {
@@ -131,39 +102,52 @@
         "nullable": "N"
       }
     },
-    "clienteId": {
-      "type": "Number",
+    "createdAt": {
+      "type": "Date",
       "required": false,
       "length": null,
-      "precision": 10,
-      "scale": 0,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "cliente_id",
-        "dataType": "int",
+        "columnName": "created_at",
+        "dataType": "timestamp",
         "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       }
     },
-    "pedidoId": {
-      "type": "Number",
+    "updatedAt": {
+      "type": "Date",
       "required": false,
       "length": null,
-      "precision": 10,
-      "scale": 0,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "pedido_id",
-        "dataType": "int",
+        "columnName": "updated_at",
+        "dataType": "timestamp",
         "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "cliente_domicilio": {
+      "type": "hasOne",
+      "model": "Cliente",
+      "foreignKey": "domicilioId",
+      "primaryKey": "id"
+    },
+    "pedido_venta_domicilio": {
+      "type": "hasOne",
+      "model": "Pedidoventa",
+      "foreignKey": "domicilioId",
+      "primaryKey": "id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

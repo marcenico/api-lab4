@@ -1,5 +1,5 @@
 {
-  "name": "Users",
+  "name": "Usuarios",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,13 +7,14 @@
   },
   "mysql": {
     "schema": "lab4v2",
-    "table": "users"
+    "table": "usuarios"
   },
   "properties": {
     "id": {
       "type": "Number",
       "id": true,
-      "required": true,
+      "generated": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,

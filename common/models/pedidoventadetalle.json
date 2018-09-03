@@ -13,7 +13,8 @@
     "id": {
       "type": "Number",
       "id": true,
-      "required": true,
+      "generated": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -100,40 +101,21 @@
         "dataScale": 0,
         "nullable": "N"
       }
-    },
-    "createdAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "created_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "updatedAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "updated_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "pedidoventa": {
+      "type": "belongsTo",
+      "model": "Pedidoventa",
+      "foreignKey": "pedidoVentaId"
+    },
+    "articulo": {
+      "type": "belongsTo",
+      "model": "Pedidoventa",
+      "foreignKey": "pedidoVentaId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -13,7 +13,8 @@
     "id": {
       "type": "Number",
       "id": true,
-      "required": true,
+      "generated": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -24,36 +25,6 @@
         "dataPrecision": 10,
         "dataScale": 0,
         "nullable": "N"
-      }
-    },
-    "createdAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "created_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "updatedAt": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "updated_at",
-        "dataType": "timestamp",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
       }
     },
     "razonSocial": {
@@ -100,10 +71,32 @@
         "dataScale": null,
         "nullable": "Y"
       }
+    },
+    "domicilioId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "domicilio_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "pedido_venta_cliente": {
+      "type": "hasOne",
+      "model": "Pedidoventa",
+      "foreignKey": "clienteId",
+      "primaryKey": "id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

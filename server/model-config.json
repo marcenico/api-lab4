@@ -59,15 +59,11 @@
     "dataSource": "db",
     "public": true
   },
-  "PasswordResets": {
-    "dataSource": "db",
-    "public": true
-  },
   "Rubro": {
     "dataSource": "db",
     "public": true
   },
-  "Users": {
+  "Usuarios": {
     "dataSource": "db",
     "public": true
   }
