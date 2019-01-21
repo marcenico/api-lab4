@@ -135,13 +135,13 @@
   },
   "validations": [],
   "relations": {
-    "cliente_domicilio": {
+    "cliente": {
       "type": "hasOne",
       "model": "Cliente",
       "foreignKey": "domicilioId",
       "primaryKey": "id"
     },
-    "pedido_venta_domicilio": {
+    "pedido_venta": {
       "type": "hasOne",
       "model": "Pedidoventa",
       "foreignKey": "domicilioId",

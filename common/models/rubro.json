@@ -105,10 +105,15 @@
   },
   "validations": [],
   "relations": {
-    "rubroPadreAHijo": {
-      "type": "hasMany",
+    "rubroPadre": {
+      "type": "belongsTo",
       "model": "Rubro",
       "foreignKey": "rubroPadreId"
+    },
+    "rubro_articulo": {
+      "type": "hasMany",
+      "model": "Articulo",
+      "foreignKey": "rubroId"
     }
   },
   "acls": [],

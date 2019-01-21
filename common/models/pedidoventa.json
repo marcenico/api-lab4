@@ -179,7 +179,14 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "pedido_venta_detalle": {
+      "type": "hasMany",
+      "model": "Pedidoventadetalle",
+      "foreignKey": "pedidoVentaId",
+      "primaryKey": "id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

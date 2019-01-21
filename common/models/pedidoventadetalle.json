@@ -112,8 +112,8 @@
     },
     "articulo": {
       "type": "belongsTo",
-      "model": "Pedidoventa",
-      "foreignKey": "pedidoVentaId"
+      "model": "Articulo",
+      "foreignKey": "articuloId"
     }
   },
   "acls": [],

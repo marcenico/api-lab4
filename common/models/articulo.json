@@ -150,15 +150,16 @@
   },
   "validations": [],
   "relations": {
+    "rubro": {
+      "type": "belongsTo",
+      "model": "Rubro",
+      "foreignKey": "rubroId",
+      "primaryKey": "id"
+    },
     "pedidoventadetalles": {
       "type": "hasMany",
       "model": "Pedidoventadetalle",
       "foreignKey": "articuloId"
-    },
-    "rubro": {
-      "type": "hasMany",
-      "model": "Articulo",
-      "foreignKey": "rubroId"
     }
   },
   "acls": [],
